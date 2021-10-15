@@ -23,26 +23,42 @@ class Factory {
 }
 
 class FullTime{
+    
+    #hourly
+    get hourly(){ return this.#hourly }
+
     constructor(){
-        this.hourly = "$12"
+        this.#hourly = "$12"
     }
 }
 
 class PartTime{
+    
+    #hourly
+    get hourly(){ return this.#hourly }
+
     constructor(){
-        this.hourly = "$11"
+        this.#hourly = "$11"
     }
 }
 
 class Temporary{
+    
+    #hourly
+    get hourly(){ return this.#hourly }
+
     constructor(){
-        this.hourly = "$10"
+        this.#hourly = "$10"
     }
 }
 
 class Contractor{
+    
+    #hourly
+    get hourly(){ return this.#hourly }
+
     constructor(){
-        this.hourly = "$15"
+        this.#hourly = "$15"
     }
 }
 
