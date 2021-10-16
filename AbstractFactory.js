@@ -1,13 +1,22 @@
+/* 
+    1 - Create Interface
+    2 - Implements the interface in a Main class using default values
+    3 - Extends the Main class a number of times you need
+    4 - Make sure that the Main class is able to return the object with the class you need
+*/
+
+const InterfaceError = require('./error/InterfaceError')
+
 class AbstractFactory { //Interface
     #maze
 
     get maze(){ return this.#maze }
     set maze(maze){ this.#maze = maze }
 
-    createMaze() { throw Error('Function "createMaze" must be implemented by child class') }
-    createRoom(roomNumber) { throw Error('Function "createRoom" must be implemented by child class') }
-    createWall() { throw Error('Function "createWall" must be implemented by child class') }
-    createDoor(room1, room2) { throw Error('Function "createDoor" must be implemented by child class') }
+    createMaze() { throw new InterfaceError("createMaze") }
+    createRoom(roomNumber) { throw new InterfaceError("createRoom") }
+    createWall() { throw new InterfaceError("createWall") }
+    createDoor(room1, room2) { throw new InterfaceError("createDoor") }
 }
 
 class Factory extends AbstractFactory { //Implementing the interface depending on the requested type

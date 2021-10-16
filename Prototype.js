@@ -1,3 +1,8 @@
+/*
+    1 - Basically is the inplementation of the clone function,
+    allowing to make a copy of the object using its actual context
+*/
+
 class Prototype{
 
     constructor(prototype){

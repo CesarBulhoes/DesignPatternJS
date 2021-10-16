@@ -1,3 +1,12 @@
+/* 
+    1 - Create an interface of the builders
+    2 - Implements builders from the interface whenever you need... It will return an object
+    3 - Create the classes of the objects retured by the builders
+    4 - Create the class Director that sets the values for the objects returned by the builders
+*/
+
+const InterfaceError = require('./error/InterfaceError')
+
 class AbstractBuilder {
     #type
     #seats
@@ -20,14 +29,13 @@ class AbstractBuilder {
     set tripComputer(tripComputer){ this.#tripComputer = tripComputer }
     set gpsNavigator(gpsNavigator){ this.#gpsNavigator = gpsNavigator }
 
-    setCarType(type){ throw Error('Function "setCarType" must be implemented by child class') }
-    setSeats(seats){ throw Error('Function "setSeats" must be implemented by child class') }
-    setEngine(engine){ throw Error('Function "setEngine" must be implemented by child class') }
-    setTransmission(transmission){ throw Error('Function "setTransmission" must be implemented by child class') }
-    setTripComputer(tripComputer){ throw Error('Function "setTripComputer" must be implemented by child class') }
-    setGPSNavigator(gpsNavigator){ throw Error('Function "setGPSNavigator" must be implemented by child class') }
+    setCarType(type){ throw new InterfaceError("setCarType") }
+    setSeats(seats){ throw new InterfaceError("setSeats") }
+    setEngine(engine){ throw new InterfaceError("setEngine") }
+    setTransmission(transmission){ throw new InterfaceError("setTransmission") }
+    setTripComputer(tripComputer){ throw new InterfaceError("setTripComputer") }
+    setGPSNavigator(gpsNavigator){ throw new InterfaceError("setGPSNavigator") }
 }
-
 
 class CarBuilder extends AbstractBuilder {
     

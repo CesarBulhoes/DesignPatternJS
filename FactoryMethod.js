@@ -1,3 +1,9 @@
+/* 
+    1 - Basically it is a function, inside of a class, or not, that receives an input
+    and returns an specific object, depending on the input.
+    2 - It can also insert new behaviors to the object returned.
+*/
+
 class Factory {
 
     #employee
